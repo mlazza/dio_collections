@@ -7,10 +7,10 @@ fun main() {
 
     val funcionarios = listOf(joao, maria, pedroca)
 
-    funcionarios.forEach{ println(it)}
+    funcionarios.forEach { println(it) }
 
     println("-------------------------")
-    println(funcionarios.find{it.nome == "Maria"})
+    println(funcionarios.find { it.nome == "Maria" })
 
     println("-------------------------")
     //ordenar pelo salario
@@ -22,18 +22,5 @@ fun main() {
     funcionarios.groupBy { it.contrato }
         .forEach { println(it) }
 
-
-}
-
-data class Funcionario (
-    val nome: String,
-    val salario: Double,
-    val contrato: String
-) {
-    override fun toString(): String =
-        """
-                Nome:       $nome
-                Salário:    $salario
-            """.trimIndent()
 
 }
